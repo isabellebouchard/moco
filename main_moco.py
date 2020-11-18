@@ -244,6 +244,7 @@ def main_worker(gpu, ngpus_per_node, args):
             normalize
         ]
 
+    # TODO: change this for spacenet v7
     train_dataset = datasets.ImageFolder(
         traindir,
         moco.loader.TwoCropsTransform(transforms.Compose(augmentation)))
